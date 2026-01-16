@@ -4,3 +4,54 @@
   assets/
     headshot.jpg
     demo.mp3
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Yeti Blanc — Voice & Audio</title>
+  <meta name="description" content="Yeti Blanc — Voice & Audio for Brands and Agencies. Listen to the demo and get in touch." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="wrap">
+    <header class="header">
+      <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Yeti Blanc" />
+      <div class="titleblock">
+        <h1>Yeti Blanc</h1>
+        <p class="sub">Voice & audio support for brands and agencies</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <h2>Demo</h2>
+      <audio controls preload="metadata">
+        <source src="assets/demo.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <p class="small">
+        Clean, broadcast-ready audio. Fast turnaround. Easy to work with.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Contact</h2>
+      <div class="cta">
+        <a class="button" href="mailto:yeti@yetiblanc.com">Email</a>
+        <!-- Optional: replace with your Calendly link -->
+        <!-- <a class="button secondary" href="https://calendly.com/YOUR-LINK" target="_blank" rel="noreferrer">Book a quick call</a> -->
+      </div>
+      <p class="small">If you need a consistent voice for spots, promos, explainers, or ads, I’m available month-to-month.</p>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Yeti Blanc</span>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
