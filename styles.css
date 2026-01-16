@@ -19,10 +19,11 @@ body {
 }
 
 .wrap {
-  max-width: 980px;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 34px 18px 40px;
 }
+
 
 /* Desktop: two columns. Mobile: stack. */
 .top {
@@ -44,13 +45,14 @@ body {
 }
 
 .headshot {
-  width: 128px;
-  height: 128px;
+  width: 150px;
+  height: 180px;            /* taller = more hair/forehead stays in frame */
   border-radius: 18px;
   object-fit: cover;
-  object-position: center top;
+  object-position: center top; /* keeps hair in frame */
   border: 1px solid var(--line);
 }
+
 
 h1 {
   margin: 0;
@@ -76,6 +78,29 @@ h1 {
   border: 1px solid var(--line);
   border-radius: 20px;
   padding: 18px;
+}
+.wideCard {
+  margin-top: 18px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 18px;
+}
+
+.bullets {
+  margin: 10px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.bullets li {
+  margin: 8px 0;
+}
+
+.bullets strong {
+  color: var(--text);
+  font-weight: 700;
 }
 
 h2 {
@@ -121,9 +146,12 @@ audio {
 
 /* Mobile */
 @media (max-width: 820px) {
-  .top {
-    grid-template-columns: 1fr;
+  .headshot {
+    width: 120px;
+    height: 140px;
   }
+}
+
 
   .identity {
     grid-template-columns: 1fr;
