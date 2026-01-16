@@ -36,7 +36,7 @@ body {
 
 .identity {
   display: grid;
-  grid-template-columns: 128px 1fr;
+  grid-template-columns: 160px 1fr; /* was 128px */
   gap: 18px;
   align-items: center;
   padding: 18px;
@@ -45,14 +45,16 @@ body {
   border-radius: 20px;
 }
 
+
 .headshot {
   width: 150px;
-  height: 250px;              /* taller so chin stays */
+  height: 250px;
   border-radius: 18px;
   object-fit: cover;
-  object-position: center 20%; /* keeps hair + face; adjust if needed */
+  object-position: 45% 18%;
   border: 1px solid var(--line);
 }
+
 
 
 
