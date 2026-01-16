@@ -155,28 +155,28 @@ audio {
   }
 
   .identity {
-    grid-template-columns: 120px 1fr; /* headshot + name */
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-template-areas:
+      "photo name"
+      "content content";
     align-items: center;
   }
 
-  /* Make everything except the name go full width below */
-  .titleblock {
-    grid-column: 1 / -1;
-    margin-top: 10px;
-  }
-
-  /* Pull the name back up beside the headshot */
-  .titleblock h1 {
-    grid-column: 2 / 3;
-    margin-top: 0;
-  }
-
   .headshot {
+    grid-area: photo;
     width: 120px;
     height: 160px;
   }
 
-  h1 {
+  .titleblock {
+    grid-area: content;
+    margin-top: 10px;
+  }
+
+  .titleblock h1 {
+    grid-area: name;
+    margin: 0;
     font-size: 34px;
   }
 }
