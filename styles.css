@@ -47,10 +47,10 @@ body {
 
 .headshot {
   width: 150px;
-  height: 300px;              /* taller so chin stays */
+  height: 280px;              /* taller so chin stays */
   border-radius: 18px;
   object-fit: cover;
-  object-position: center 50%; /* keeps hair + face; adjust if needed */
+  object-position: center 30%; /* keeps hair + face; adjust if needed */
   border: 1px solid var(--line);
 }
 
