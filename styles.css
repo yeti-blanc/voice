@@ -51,7 +51,7 @@ body {
   height: 250px;
   border-radius: 18px;
   object-fit: cover;
-  object-position: 45% 18%;
+  object-position: 40% 18%;
   border: 1px solid var(--line);
 }
 
