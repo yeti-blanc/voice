@@ -150,39 +150,33 @@ audio {
 
 /* Mobile */
 @media (max-width: 980px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
   .identity {
+    display: grid;
     grid-template-columns: 120px 1fr;
-    align-items: start;
+    grid-template-areas:
+      "photo name"
+      "content content";
+    align-items: center;
   }
 
-  .titleblock { 
-    display: contents; 
-  }
-
-  .headshot { 
-    grid-column: 1;
-    grid-row: 1;
+  .headshot {
+    grid-area: photo;
     width: 120px;
     height: 160px;
   }
 
+  .titleblock {
+    grid-area: content;
+    margin-top: 10px;
+  }
+
   .titleblock h1 {
-    grid-column: 2;
-    grid-row: 1;
+    grid-area: name;
     margin: 0;
     font-size: 34px;
-    align-self: center;
   }
-
-  .titleblock .sub,
-  .titleblock .micro,
-  .titleblock .cta {
-    grid-column: 1 / -1;
-    grid-row: 2;
-  }
-
-  .titleblock .micro { margin-top: 6px; }
-  .titleblock .cta { margin-top: 10px; }
 }
-
-
