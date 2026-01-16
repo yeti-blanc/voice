@@ -151,12 +151,24 @@ audio {
 /* Mobile */
 @media (max-width: 980px) {
   .top {
-    grid-template-columns: 1fr;   /* forces stack */
+    grid-template-columns: 1fr;
   }
 
   .identity {
-    grid-template-columns: 1fr;   /* prevents side-by-side inside identity */
-    text-align: left;
+    grid-template-columns: 120px 1fr; /* headshot + name */
+    align-items: center;
+  }
+
+  /* Make everything except the name go full width below */
+  .titleblock {
+    grid-column: 1 / -1;
+    margin-top: 10px;
+  }
+
+  /* Pull the name back up beside the headshot */
+  .titleblock h1 {
+    grid-column: 2 / 3;
+    margin-top: 0;
   }
 
   .headshot {
@@ -168,4 +180,5 @@ audio {
     font-size: 34px;
   }
 }
+
 
