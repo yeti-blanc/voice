@@ -10,37 +10,45 @@
 
 <body>
   <main class="wrap">
-    <section class="top">
-      <div class="identity">
-        <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Yeti Blanc" />
-        <div class="titleblock">
-          <h1>Yeti Blanc</h1>
-          <p class="sub">Voice & audio support for brands and agencies</p>
-          <p class="micro">Clean, broadcast-ready audio. Fast turnaround. Easy to work with.</p>
+  <section class="top">
+    <div class="identity">
+      <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Yeti Blanc" />
+      <div class="titleblock">
+        <h1>Yeti Blanc</h1>
+        <p class="sub">Voice & audio support for brands and agencies</p>
+        <p class="micro">Clean, broadcast-ready audio. Fast turnaround. Easy to work with.</p>
 
-          <div class="cta">
-            <!-- CHANGE THIS TO YOUR GMAIL FOR NOW -->
-            <a class="button" href="mailto:yetiblancmusic@gmail.com">Email</a>
-
-            <!-- Optional: add later -->
-            <!-- <a class="button secondary" href="https://calendly.com/YOUR-LINK" target="_blank" rel="noreferrer">Book a quick call</a> -->
-          </div>
+        <div class="cta">
+          <a class="button" href="mailto:YOURNAME@gmail.com">Email</a>
+          <!-- <a class="button secondary" href="https://calendly.com/YOUR-LINK" target="_blank" rel="noreferrer">Book a quick call</a> -->
         </div>
       </div>
+    </div>
 
-      <div class="demoCard">
-        <h2>Demo</h2>
-        <audio controls preload="metadata">
-          <source src="assets/demo.mp3" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
-      </div>
-    </section>
+    <div class="demoCard">
+      <h2>Demo</h2>
+      <audio controls preload="metadata">
+        <source src="assets/demo.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+      <p class="small">Commercial • SaaS • Healthcare • Regional</p>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <span>© <span id="year"></span> Yeti Blanc</span>
-    </footer>
-  </main>
+  <section class="wideCard">
+    <h2>What I’m best for</h2>
+    <ul class="bullets">
+      <li><strong>Agency support:</strong> quick reads, pickups, alts, and clean deliverables.</li>
+      <li><strong>Brand video + ads:</strong> modern, human, confident — not announcer.</li>
+      <li><strong>Reliable workflow:</strong> consistent sound, clear communication, fast turnaround.</li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Yeti Blanc</span>
+  </footer>
+</main>
+
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
