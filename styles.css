@@ -50,7 +50,7 @@ body {
   height: 230px;              /* taller so chin stays */
   border-radius: 18px;
   object-fit: cover;
-  object-position: center 20%; /* keeps hair + face; adjust if needed */
+  object-position: center 30%; /* keeps hair + face; adjust if needed */
   border: 1px solid var(--line);
 }
 
