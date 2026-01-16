@@ -47,7 +47,7 @@ body {
 
 .headshot {
   width: 150px;
-  height: 210px;              /* taller so chin stays */
+  height: 230px;              /* taller so chin stays */
   border-radius: 18px;
   object-fit: cover;
   object-position: center 20%; /* keeps hair + face; adjust if needed */
