@@ -15,8 +15,11 @@ body{
 
 .page{
   max-width: 1280px;
+  min-height: 100vh;              /* lets footer sit at bottom */
   margin: 0 auto;
-  padding: 44px 28px;
+  padding: 44px 28px 28px;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Desktop layout */
@@ -25,9 +28,10 @@ body{
   grid-template-columns: 520px 1fr;
   gap: 44px;
   align-items:start;
+  flex: 1;                        /* push footer to bottom */
 }
 
-/* Photo block matches Canva feel */
+/* Photo block */
 .photoBlock{
   background: var(--blue);
   border-radius: 14px;
@@ -45,14 +49,6 @@ body{
   display:block;
   object-fit: cover;
   object-position: 35% 18%;
-}
-
-.copyright{
-  margin-top: 14px;
-  font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
-  font-size: 16px;
-  letter-spacing: 0.06em;
-  color: var(--white);
 }
 
 /* Copy block */
@@ -106,13 +102,9 @@ audio{
   width: 100%;
 }
 
-/* Buttons */
-.buttons{
-  margin-top: 52px;            /* desktop: 52 below tagline2 */
-  display:flex;
-  gap: 52px;                   /* desktop: 52 apart */
-  flex-wrap: wrap;
-  align-items:center;
+/* Email button (left aligned with copy) */
+.emailRow{
+  margin-top: 52px;               /* desktop spacing from tagline2 */
 }
 
 .btn{
@@ -123,12 +115,6 @@ audio{
   padding: 14px 22px;
   border-radius: 12px;
   display:inline-block;
-  border: 0;
-}
-
-.btnBlue{
-  background: var(--blue);
-  color: #0b0c10;
 }
 
 .btnWhite{
@@ -136,10 +122,23 @@ audio{
   color: #0b0c10;
 }
 
+/* Footer: centered at very bottom of page */
+.pageFooter{
+  padding-top: 18px;
+}
+
+.copyright{
+  font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  color: var(--white);
+  text-align: center;
+}
+
 /* MOBILE */
 @media (max-width: 900px){
   .page{
-    padding: 18px 16px;
+    padding: 18px 16px 18px;
   }
 
   .hero{
@@ -147,15 +146,19 @@ audio{
     gap: 16px;
   }
 
-  .photoBlock{
-    padding: 15px 15px 15px 15px;   /* ensures the 15px clearance */
+  /* Mobile order: copy first, photo block last */
+  .copyBlock{
+    order: 1;
+    padding-top: 0;
   }
 
-  .copyright{
-    font-size: 12px;
-    text-align:center;
-    width: 100%;
-    margin-top: 12px;
+  .photoBlock{
+    order: 2;
+    padding: 15px;               /* blue rectangle spacing */
+  }
+
+  .headshot{
+    max-width: 100%;
   }
 
   .name{
@@ -173,12 +176,19 @@ audio{
     margin-top: 16px;
   }
 
-  .buttons{
-    margin-top: 15px;  /* mobile: 15 below tagline2 */
-    gap: 15px;         /* mobile: 15 apart */
+  .emailRow{
+    margin-top: 15px;            /* mobile: 15 below tagline2 area */
   }
 
   .btn{
     padding: 12px 18px;
+  }
+
+  .pageFooter{
+    padding-top: 12px;
+  }
+
+  .copyright{
+    font-size: 12px;
   }
 }
