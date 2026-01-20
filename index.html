@@ -23,7 +23,7 @@
       <section class="copyBlock">
         <h1 class="name">YETI BLANC</h1>
         <div class="tagline1">VOICE &amp; AUDIO FOR BRANDS AND AGENCIES</div>
-        <div class="tagline2">NATURAL VOICE, CLEAN AUDIO WITH FAST DELIVERY</div>
+        <div class="tagline2">NATURAL VOICE. CLEAN AUDIO. FAST DELIVERY.</div>
 
         <div class="players">
           <div class="playerGroup">
@@ -50,8 +50,12 @@
     </section>
 
     <footer class="pageFooter">
-      <div class="copyright">© 2026 YETI BLANC</div>
+      <div class="copyright">© <span id="year"></span> YETI BLANC</div>
     </footer>
   </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
