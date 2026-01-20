@@ -3,55 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Yeti Blanc — Voice & Audio</title>
-  <meta name="description" content="Yeti Blanc — Voice & Audio for Brands and Agencies. Listen to the demo and get in touch." />
+  <title>Yeti Blanc — Voice</title>
+  <meta name="description" content="Voice & audio for brands and agencies. Natural voice, clean audio with fast delivery." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <main class="wrap">
-  <section class="top">
-    <div class="identity">
-      <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Yeti Blanc" />
-      <div class="titleblock">
-        <h1>Yeti Blanc</h1>
-        <p class="sub">Voice & audio support for brands and agencies</p>
-        <p class="micro">Clean, broadcast-ready audio. Fast turnaround. Easy to work with.</p>
+  <main class="page">
+    <section class="hero">
+      <!-- LEFT: photo block -->
+      <aside class="photoBlock">
+        <img class="headshot" src="assets/headshot.jpg" alt="Headshot of Yeti Blanc" />
+        <div class="copyright">© 2026 YETI BLANC</div>
+      </aside>
 
-        <div class="cta">
-          <a class="button" href="mailto:yetiblancmusic@gmail.com">Email</a>
-          <!-- <a class="button secondary" href="https://calendly.com/YOUR-LINK" target="_blank" rel="noreferrer">Book a quick call</a> -->
+      <!-- RIGHT: copy + players + buttons -->
+      <section class="copyBlock">
+        <h1 class="name">YETI BLANC</h1>
+        <div class="tagline1">VOICE &amp; AUDIO FOR BRANDS AND AGENCIES</div>
+        <div class="tagline2">NATURAL VOICE, CLEAN AUDIO WITH FAST DELIVERY</div>
+
+        <div class="players">
+          <div class="playerGroup">
+            <div class="playerLabel">DRY DEMO</div>
+            <audio controls preload="metadata">
+              <source src="assets/dry-demo.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+
+          <div class="playerGroup">
+            <div class="playerLabel">PRODUCED DEMO</div>
+            <audio controls preload="metadata">
+              <source src="assets/produced-demo.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="demoCard">
-      <h2>Demo</h2>
-      <audio controls preload="metadata">
-        <source src="assets/demo.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-      <p class="small">Commercial • SaaS • Healthcare • Regional</p>
-    </div>
-  </section>
-
-  <section class="wideCard">
-    <h2>What I’m best for</h2>
-    <ul class="bullets">
-      <li><strong>Agency support:</strong> quick reads, pickups, alts, and clean deliverables.</li>
-      <li><strong>Brand video + ads:</strong> modern, human, confident — not announcer.</li>
-      <li><strong>Reliable workflow:</strong> consistent sound, clear communication, fast turnaround.</li>
-    </ul>
-  </section>
-
-  <footer class="footer">
-    <span>© <span id="year"></span> Yeti Blanc</span>
-  </footer>
-</main>
-
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+        <nav class="buttons">
+          <a class="btn btnBlue" href="assets/dry-demo.mp3" download>DRY DEMO</a>
+          <a class="btn btnBlue" href="assets/produced-demo.mp3" download>PRODUCED</a>
+          <a class="btn btnWhite" href="mailto:YOURNAME@gmail.com">EMAIL</a>
+        </nav>
+      </section>
+    </section>
+  </main>
 </body>
 </html>
