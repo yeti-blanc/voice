@@ -1,182 +1,184 @@
-:root {
-  --bg: #0b0c10;
-  --card: #12141a;
-  --text: #f2f3f5;
-  --muted: #a7abb4;
-  --line: rgba(255,255,255,0.10);
-  --btn: #f2f3f5;
-  --btnText: #0b0c10;
+:root{
+  --bg: #111111;
+  --white: #ffffff;
+  --blue: #7bafd4;
+  --textBlue: #7bafd4;
 }
 
-* { box-sizing: border-box; }
+*{ box-sizing:border-box; }
 
-body {
-  margin: 0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+body{
+  margin:0;
   background: var(--bg);
-  color: var(--text);
-  line-height: 1.4;
+  color: var(--white);
 }
 
-.wrap {
-  max-width: 1120px;
+.page{
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 34px 18px 40px;
+  padding: 44px 28px;
 }
 
-
-/* Desktop: two columns. Mobile: stack. */
-.top {
-  display: grid;
-  grid-template-columns: 1.25fr 0.9fr;
-  gap: 18px;
-  align-items: start;
+/* Desktop layout */
+.hero{
+  display:grid;
+  grid-template-columns: 520px 1fr;
+  gap: 44px;
+  align-items:start;
 }
 
-
-.identity {
-  display: grid;
-  grid-template-columns: 160px 1fr; /* was 128px */
-  gap: 18px;
-  align-items: center;
+/* Photo block matches Canva feel */
+.photoBlock{
+  background: var(--blue);
+  border-radius: 14px;
   padding: 18px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
 }
 
-
-.headshot {
-  width: 150px;
-  height: 250px;
-  border-radius: 18px;
+.headshot{
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 10px;
+  display:block;
   object-fit: cover;
   object-position: 35% 18%;
-  border: 1px solid var(--line);
 }
 
-
-
-
-h1 {
-  margin: 0;
-  font-size: 40px;
-  letter-spacing: 0.2px;
-  line-height: 1.05;
-}
-
-.sub {
-  margin: 10px 0 0;
-  color: var(--muted);
+.copyright{
+  margin-top: 14px;
+  font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-size: 16px;
+  letter-spacing: 0.06em;
+  color: var(--white);
 }
 
-.micro {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 14px;
+/* Copy block */
+.copyBlock{
+  padding-top: 10px;
 }
 
-.demoCard {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 18px;
-}
-.wideCard {
-  margin-top: 18px;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 20px;
-  padding: 18px;
+.name{
+  font-family: "Antonio", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 105px;
+  line-height: 0.95;
+  margin: 0 0 12px 0;
+  letter-spacing: 0.02em;
 }
 
-.bullets {
-  margin: 10px 0 0;
-  padding-left: 18px;
-  color: var(--muted);
-  font-size: 14px;
+.tagline1,
+.tagline2{
+  font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  letter-spacing: 0.04em;
 }
 
-.bullets li {
-  margin: 8px 0;
+.tagline1{
+  font-size: 27.4px;
+  color: var(--textBlue);
+  margin-bottom: 6px;
 }
 
-.bullets strong {
-  color: var(--text);
-  font-weight: 700;
+.tagline2{
+  font-size: 27.4px;
+  color: var(--white);
+  margin-bottom: 0;
 }
 
-h2 {
-  margin: 0 0 12px;
+/* Players */
+.players{
+  margin-top: 26px;
+  display:grid;
+  gap: 16px;
+  max-width: 560px;
+}
+
+.playerLabel{
+  font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
   font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.06em;
+  margin-bottom: 8px;
+  color: var(--white);
 }
 
-audio {
+audio{
   width: 100%;
 }
 
-.cta {
-  display: flex;
-  gap: 10px;
+/* Buttons */
+.buttons{
+  margin-top: 52px;            /* desktop: 52 below tagline2 */
+  display:flex;
+  gap: 52px;                   /* desktop: 52 apart */
   flex-wrap: wrap;
-  margin-top: 14px;
+  align-items:center;
 }
 
-.button {
-  display: inline-block;
-  padding: 10px 14px;
+.btn{
+  font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-decoration:none;
+  padding: 14px 22px;
   border-radius: 12px;
-  background: var(--btn);
-  color: var(--btnText);
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
+  display:inline-block;
+  border: 0;
 }
 
-.button.secondary {
-  background: transparent;
-  color: var(--text);
-  border: 1px solid var(--line);
+.btnBlue{
+  background: var(--blue);
+  color: #0b0c10;
 }
 
-.footer {
-  margin-top: 18px;
-  color: var(--muted);
-  font-size: 13px;
+.btnWhite{
+  background: var(--white);
+  color: #0b0c10;
 }
 
-/* Mobile */
-@media (max-width: 980px) {
-  .top {
+/* MOBILE */
+@media (max-width: 900px){
+  .page{
+    padding: 18px 16px;
+  }
+
+  .hero{
     grid-template-columns: 1fr;
+    gap: 16px;
   }
 
-  .identity {
-    display: grid;
-    grid-template-columns: 120px 1fr;
-    grid-template-areas:
-      "photo name"
-      "content content";
-    align-items: center;
+  .photoBlock{
+    padding: 15px 15px 15px 15px;   /* ensures the 15px clearance */
   }
 
-  .headshot {
-    grid-area: photo;
-    width: 120px;
-    height: 160px;
+  .copyright{
+    font-size: 12px;
+    text-align:center;
+    width: 100%;
+    margin-top: 12px;
   }
 
-  .titleblock {
-    grid-area: content;
-    margin-top: 10px;
+  .name{
+    font-size: 59.1px;
+    margin-bottom: 8px;
   }
 
-  .titleblock h1 {
-    grid-area: name;
-    margin: 0;
-    font-size: 34px;
+  .tagline1,
+  .tagline2{
+    font-size: 15.5px;
+  }
+
+  .players{
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .buttons{
+    margin-top: 15px;  /* mobile: 15 below tagline2 */
+    gap: 15px;         /* mobile: 15 apart */
+  }
+
+  .btn{
+    padding: 12px 18px;
   }
 }
