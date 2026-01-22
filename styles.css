@@ -123,8 +123,11 @@ audio{
 
 /* Footer */
 .pageFooter{
-  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers everything horizontally */
 }
+
 
 .copyright{
   font-family: "Bebas Neue", system-ui, -apple-system, Segoe UI, Roboto, Arial;
@@ -139,6 +142,7 @@ audio{
   letter-spacing: 0.06em;
   color: var(--textBlue);
   text-decoration: none;
+  text-align: center;
 }
 
 .attribLink:hover{
