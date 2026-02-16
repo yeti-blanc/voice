@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Words — Yeti Blanc</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page">
+
+    <section class="copyBlock" style="max-width: 760px; margin: 0 auto; text-align: center;">
+
+      <!-- TITLE -->
+      <h1 class="name" style="font-size: 56px; margin-bottom: 18px;">
+        WORDS
+      </h1>
+
+      <!-- ALBUM ART -->
+      <div style="margin-bottom: 22px;">
+        <img
+          src="assets/Words_Album Art.png"
+          alt="Album art"
+          style="
+            width: 100%;
+            max-width: 360px;
+            border-radius: 14px;
+            display: block;
+            margin: 0 auto;
+          "
+        />
+      </div>
+
+      <!-- AUDIO PLAYER -->
+      <div class="players" style="max-width: 420px; margin: 0 auto 28px;">
+        <audio controls preload="metadata">
+          <source src="assets/song.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- LYRICS -->
+      <div style="
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+        line-height: 1.7;
+        font-size: 18px;
+        color: var(--white);
+        text-align: left;
+      ">
+
+        <!-- ✏️ REPLACE BELOW WITH YOUR LYRICS -->
+
+        <p>
+Tell me you love me
+Tell me you care
+Tell me I'll never be alone
+Never be alone again
+
+I know you're weary
+From the load that you bear
+I promise I'll always be around 
+Always be around to share
+
+So let's tattoo these rings with our words 
+So they'll last well beyond the day that we die
+Some say it won't last
+but my darling I'm willing to try
+
+Say that you're with me
+Say that you're here
+Say that you’ll always hold me close 
+Always hold me close and near
+
+I’m here beside you
+Through the bad and the good
+I promise I’ll dedicate my life
+Dedicate it like I should
+
+So let's tattoo these rings with our words 
+So they'll last well beyond the day that we die
+Some say it won't last
+but my darling I'm willing to try   
+
+And now ain't the time for saving
+Let’s  do so much more than survive
+Let’s take on the world we’re braving
+And make the best days of our lives
+
+So tell me you want me
+Every night, every day
+I promise my heart will never fade
+My heart will never fade away
+
+So let's tattoo these rings with our words 
+So they'll last well beyond the day that we die
+Some say it won't last
+but my darling I'm willing to try  
+
+I am willing to try
+Are you willing to try
+Are you willing to try
+Yes, I am willing to try
+
+
+        </p>
+
+        <p>
+          Keep line breaks exactly how you want them to appear.
+        </p>
+
+      </div>
+
+      <!-- BACK LINK -->
+      <div style="margin-top: 28px; text-align: center;">
+        <a class="attribLink" href="index.html">← Back</a>
+      </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="pageFooter">
+      <div class="copyright">© <span id="year"></span> YETI BLANC</div>
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
